@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title %></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/Main.css">
+</head>
+<body>
+    <%- include("./Header.ejs")%>
+     <form method="POST">
+        <div class="Container">
+         <h1 class="title"><%=title %> для <%=Category %> Новостей </h1>
+            <div class="Container__content">
+                <div class="Container__content__item">
+                    <label for="Title">Загаловок:</label>
+                    <input type="text" name="title" class="input" id="Title" autocomplete="off">
+                 </div>
+                 <div class="Container__content__item">
+                    <label for="Text">Текст:</label>
+                    <input type="text" name="text" class="input" id="Text" autocomplete="off">
+                 </div>
+             </div>
+             <div class="Container__content">
+                <div class="Container__content__item">
+                    <label for="сategory">Категория:</label>
+                    <input type="text" name="сategory" class="input"  id="Genre" autocomplete="off">
+                 </div>
+                 <div class="Container__content__item">
+                    <label for="Link">Ссылка:</label>
+                    <input type="text" name="link" class="input" id="Link" autocomplete="off">
+                 </div>
+             </div>
+             <div class="Btn">
+                <button class="button">Submit</button>
+                <a href="/Api/astrophysics"><div class="link"><p>Астрофизика</p></div></a>
+             </div>
+        </div>
+     </form>
+     <%- include("./DBInfo/Blog.ejs")%>
+</body>
+<html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title %></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/Auth.css">
+</head>
+<body>
+    <%- include("./Header.ejs")%>
+    <form method="POST">
+        <div class="Container">
+         <h1 class="title"><%=title %></h1>
+            <div class="Container__content">
+                <div class="Container__content__item">
+                    <label for="Login">Логин:</label>
+                    <input type="text" name="Name" class="input" id="Name">
+                 </div>
+             </div>
+             <div class="Container__content">
+                 <div class="Container__content__item">
+                    <label for="Password">Пароль:</label>
+                    <input type="password" name="Password" class="input" id="Password">
+                 </div>
+             </div>
+             <div class="Container__content">
+                <div class="Container__content__item">
+                   <label for="Email">Почта:</label>
+                   <input type="text" name="Email" class="input" id="Email">
+                </div>
+            </div>
+             <div class="Btn">
+                <button class="button">Submit</button>
+             </div>
+        </div>
+     </form>
+     <%- include("./DBInfo/Users.ejs")%>
+</body>
+<html>

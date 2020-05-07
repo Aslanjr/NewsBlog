@@ -1,0 +1,29 @@
+.Header{
+	width: 100%; 
+	display: flex;
+	margin: 0;
+	padding: 3% 0%;
+	background: #000;
+	justify-content: center;
+
+}
+.Header__item{
+	padding: 10px;
+	margin: 10px;
+	text-align: center;
+	list-style: none;
+	outline: 1px solid #ff0;
+	transition: all .35s ease-in-out;
+	cursor: pointer;
+}
+.Header__item:hover {
+	outline: 1px solid red;
+}
+.Header__item:hover .Header__item__text{
+	color: red;
+}
+.Header__item__text{
+	transition: all .35s ease-in-out;
+	color: #ff0;
+	text-decoration: none;
+}

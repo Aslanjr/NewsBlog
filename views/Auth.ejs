@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=title %></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/css/Auth.css">
+</head>
+<body>
+   <%- include("./Header.ejs")%>
+    <div id="app">
+        <form>
+            <div class="Container">
+             <h1 class="title"><%=title %></h1>
+                <div class="Container__content">
+                    <div class="Container__content__item">
+                       <label for="Email">Почта:</label>
+                       <input type="text" v-model="user.Email"  class="input" id="Email">
+                    </div>
+                </div>
+                 <div class="Container__content">
+                     <div class="Container__content__item">
+                        <label for="Password">Пароль:</label>
+                        <input type="password" v-model="user.Password" class="input" >
+                     </div>
+                 </div>
+                 <div class="Btn">
+                    <button class="button" @click="post">Submit</button>
+                 </div>
+            </div>
+         </form>
+         <p>{{token}}</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/js/Auth.js"></script>
+</body>
+<html>
