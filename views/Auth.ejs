@@ -8,23 +8,23 @@
 <body>
    <%- include("./Header.ejs")%>
     <div id="app">
-        <form>
+        <form method="POST">
             <div class="Container">
              <h1 class="title"><%=title %></h1>
                 <div class="Container__content">
                     <div class="Container__content__item">
                        <label for="Email">Почта:</label>
-                       <input type="text" v-model="user.Email"  class="input" id="Email">
+                       <input type="text" name="Email"  class="input" id="Email">
                     </div>
                 </div>
                  <div class="Container__content">
                      <div class="Container__content__item">
                         <label for="Password">Пароль:</label>
-                        <input type="password" v-model="user.Password" class="input" >
+                        <input type="password" name="Password" class="input" >
                      </div>
                  </div>
                  <div class="Btn">
-                    <button class="button" @click="post">Submit</button>
+                    <button class="button">Submit</button>
                  </div>
             </div>
          </form>

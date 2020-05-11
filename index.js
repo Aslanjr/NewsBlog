@@ -3,15 +3,23 @@ const app = express();
 const Page = require("./Routes/main");
 const Auth = require('./Routes/Auth');
 const SecretPage = require('./Routes/Secret')
-const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const Port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
+const session = require('express-session');
+
 
 
 
 app.use(cookieParser());
-app.use(session({secret:'Himera'}));
+app.use(session({
+	secret:'WinterCommin2020',
+	saveUninitialized:true,
+	resave:true,
+
+}))
+
+
 
 app.get('',(req,res)=>{
 	res.redirect('/Api/Main');

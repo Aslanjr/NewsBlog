@@ -11,13 +11,13 @@ new Vue({
 	},
 	methods:{
 		post(){
-			// axios
-			// 	.post('/Auth/Login',{
-			// 		Email:this.user.Email,
-			// 		Password:this.user.Password
-			// 	})
-			// 	.then(response=> if)
-   			//  .catch(error => alert(error,'error'));
+			axios
+				.post('/Auth/Login',{
+					Email:this.user.Email,
+					Password:this.user.Password
+				})
+				.then(res => this.token = res.data )
+   			 .catch(error => alert(error,'error'));
 
 		}
 	}
